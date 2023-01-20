@@ -680,7 +680,45 @@ It's a k8s process that watches resources, and mkaes changes attempting to move 
 It's a key-value pair that can be assigned to any k8s resource.  
 Selectors use labels to filter eligible resources for scheduling and other operations.
 
+## What're operators?
+Operators are k8s plug-in components that can react to cluster events and control the state of resources.  
 
+## What's RHOCP?
+It's a set of modular components and services built on top of Red Hat CoreOS and K8s.  
+RHOCP adds PaaS capabilities such as:  
+* Remote management,
+* Increased security,
+* Monitoring and autiting,
+* Application lifecycle management, 
+* And self-service interfaces for developers.  
+An OpenShift cluster is a k8s cluster that can be managed the same way, but using the management tools provided by OpenShift such as:  
+* Command-line interface
+* Web console  
+This allows for more productive workflows and makes common tasks much easier.
+
+## What's an Infra Node in OpenShift?
+It's a node server containing infrastructure services like:
+* Monitoring,
+* Logging,
+* External routing
+
+## A console
+A web UI provided by the RHOCP cluster that allows developers and administrators to interact with cluster resources.
+
+## A project
+OpenShift extension of Kubernetes' namespaces.  
+Allows the definition of user access control (UAC) to resources.
+
+## Draw the OpenShift Container Platform stack:
+`xdg-open ~/Pictures/Screenshot_20221204_080902.png`  
+* Container optimized OS: the base OS is Red Hat CoreOS, Which's a linux distribution focused on providing an immutable operating system for container execution.
+* Container runtime: CRI-O is an implementation of the k8s container runtume interface (CRI) to enable using OCI compatible runtimes,  
+CRI-O can use any container runtime that satisfies CRI:  
+`runc` ==> Used by the docker service  
+`libpod` ==> used by podman  
+`rkt` ==> from CoreOS
+* Kubernetes (Container orchestration and management): manages a cluster of hosts, physical or virtual, that run containers.  
+It uses resources that describe multicontainer applcations composed of multiple resources, and how they interconnect
 
 
 
