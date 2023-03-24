@@ -202,3 +202,54 @@ journalctl -x -f
 curl -vk quay.io
 oc whoami -t
 ```
+
+
+## What's moving to infra?
+* To isolate the services should be running separately + logging
+
+## htpasswd
+* Local authentication
+
+## DMZ
+* router sharding
+* Creating a new ingress controller for the dmz load-balancing
+- `https://access.redhat.com/solutions/4981211`
+
+* Labeling dmz nodes:
+- `oc label node NAME
+
+## Diff label and role???
+* label ===> scheduling
+* role ===> MC
+
+## Removing resources by using commands:
+
+
+## Everything credential has a secret with passwords could be copied from the Webui
+
+
+## etcd backup 
+* `https://access.redhat.com/solutions/5843611`
+
+## etcd health check
+* `oc get co`
+
+
+HAProxy
+d
+
+
+- 3-storages ===> block/nfs/buckets
+- certificate
+- LDAP
+- LDAP o group
+
+
+
+oc get co
+
+* Day2-operation
+1. Move components ===> monitoring/routes/image registry ===> to infra node
+
+
+CSR ===> kubelet service not responding to the master
